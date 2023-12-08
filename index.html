@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>LingerieLux</title>
+</head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <span id="shop">LingerieLux</span>
+        <div class="inputContainer">
+            <input placeholder="Buscar..." type="text" name="buscador" id="search-bar">
+            <img src="./images/search-heart.svg">   
+        </div>
+        <div>
+            <button class="btn" type="submit" id="btn-modify">Modificar un Producto</button>
+            <button class="btn" type="submit" id="btn-create">Crear un nuevo producto</button>
+        </div>
+    </header>
+    <section class="styleBlack">
+        <span>Descubre tu estilo en LingerieLux</span>
+        <div class="nav" id="nav">
+            <div id="genre-buttons" class="categoryShop"> 
+            <ul class="nav-list">
+                <li> <a href="index.html" class="menulink"><button class="genre-button" onclick="filterByCategory('Todo')">Todo</button></a></li>
+                <li><a href="#" class="menulink"><button class="genre-button" onclick="filterByCategory('Colección Atenea')">Colección Atenea</button></a></li>
+                <li><a href="#" class="menulink"><button class="genre-button" onclick="filterByCategory('Colección Mérida')">Colección Mérida</button></a></li>
+                <li><a href="#" class="menulink"><button class="genre-button" onclick="filterByCategory('Colección Esmeralda')">Colección Esmeralda</button></a><li>
+                <li> <a href="#" class="menu__link"><button class="genre-button" onclick="filterByCategory('Colección Mulán')">Colección Mulán</button></a></li>
+                <li> <a href="#" class="menu__link"><button class="genre-button" onclick="filterByCategory('Colección Afrodita')">Colección Afrodita</button></a></li>
+            </ul>
+          </div>
+        </div>
+    </section>
+    <div class="container-products">
+        <div class="modal-modify">
+            <button id="close-modal2">X</button>
+            <p>Sku</p>
+            <input type="text" id="new-sku2" placeholder="...">
+            <p>Producto</p>
+            <input type="text" id="new-product2" placeholder="...">
+            <p>Precio</p>
+            <input type="text" id="new-price2" placeholder="...">
+            <p>Descripción</p>
+            <input type="text" id="new-description2" placeholder="...">
+            <p>Categoria</p>
+            <input type="text" id="new-category2" placeholder="...">
+            <p>Inventario</p>
+            <input type="text" id="new-stock2" placeholder="...">
+            <p>Imagen</p>
+            <input type="file" id="new-image2">
+            <button id="call-product">Call product</button>
+            <button id="update-product">Update product</button>
+        </div>
+    </div>
+    <div class="container-products">
+        <div class="modal">
+            <button id="close-modal">X</button>
+            <p>Sku</p>
+            <input type="text" id="new-sku" placeholder="...">
+            <p>Producto</p>
+            <input type="text" id="new-product" placeholder="...">
+            <p>Precio</p>
+            <input type="text" id="new-price" placeholder="...">
+            <p>Descripción</p>
+            <input type="text" id="new-description" placeholder="...">
+            <p>Categoria</p>
+            <input type="text" id="new-category" placeholder="...">
+            <p>Inventario</p>
+            <input type="text" id="new-stock" placeholder="...">
+            <p>Imagen</p>
+            <input type="file" id="new-image">
+            <button id="btn-new-create">Create new object</button>
+        </div>
+    </div>
+    <section class="order">
+        <div class="btnPrice">
+          <button id="btn-filter-asc" >Ordenar precio de menor a mayor</button>
+          <button id="btn-filter-desc" >Ordenar precio de mayor a menor</button>
+      </div>
+    </section>
+        <div class="cart-summary">
+            <h2>Carrito</h2>
+            <p>Total: <span id="cart-total">$0</span></p>
+            <button id="empty-cart">Vaciar Carrito</button>
+        </div>
+        <div id="cart" class="cart">
+            <div class="cart-items" id="cart-items">
+            </div>
+    </div>
+    <main id="container-cards"></main>
+    <script src="./js/app.js"></script>
+</body>
+</html>
